@@ -1,0 +1,30 @@
+{
+  "campaign": "speedrun_super_research",
+  "stage": "benchmark",
+  "candidate_id": "0011_lr_dense_0022_regime_change",
+  "run_id": "run_1779438336_32",
+  "overrides": {
+    "aux_loss_alpha": 0.00015,
+    "lr_dense": 0.0022
+  },
+  "dtype_override": null,
+  "decision": {
+    "kept": true,
+    "reason": "within_kept_envelope",
+    "wave": "first_parallel_wave",
+    "is_global_champion": false,
+    "in_campaign": true,
+    "core_drop_from_seed": -0.004692249444724694,
+    "core_drop_threshold": 0.002
+  },
+  "metrics": {
+    "final_valid_loss": 5.123629570007324,
+    "final_train_loss": 5.096404075622559,
+    "core": -0.018095821374578425,
+    "tokens_per_s_per_gpu": 91322.64117800738
+  },
+  "budget": {
+    "steps": 512
+  },
+  "image": "xjdr/nmoe_train:latest"
+}

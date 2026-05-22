@@ -1,0 +1,11 @@
+{
+  "label": "0011_aux_0005_vetoed",
+  "run_id": "run_1779438242_32",
+  "overrides": {
+    "aux_loss_alpha": 0.0005
+  },
+  "dtype_override": null,
+  "elapsed_s": 1087.6902005672455,
+  "image": "xjdr/nmoe_train:latest",
+  "agent_visible_commit": "970a146433f9c649d09ddab36f675974f53dd905"
+}

@@ -1,0 +1,13 @@
+{
+  "label": "0011_refine_3axis",
+  "run_id": "run_1779438956_32",
+  "overrides": {
+    "lr_router": 0.0021,
+    "aux_loss_alpha": 0.00015,
+    "lr_dense": 0.0022
+  },
+  "dtype_override": null,
+  "elapsed_s": 1100.1623492240906,
+  "image": "xjdr/nmoe_train:latest",
+  "agent_visible_commit": "970a146433f9c649d09ddab36f675974f53dd905"
+}

@@ -1,0 +1,11 @@
+{
+  "label": "0011_seed_no_aux",
+  "run_id": "run_1779439427_1238",
+  "overrides": {
+    "aux_loss_alpha": 0.0
+  },
+  "dtype_override": null,
+  "elapsed_s": 1076.0709719657898,
+  "image": "xjdr/nmoe_train:latest",
+  "agent_visible_commit": "970a146433f9c649d09ddab36f675974f53dd905"
+}

@@ -1,0 +1,12 @@
+{
+  "label": "0011_champion_aux_00012",
+  "run_id": "run_1779438473_32",
+  "overrides": {
+    "aux_loss_alpha": 0.00012,
+    "lr_dense": 0.0022
+  },
+  "dtype_override": null,
+  "elapsed_s": 1097.1083052158356,
+  "image": "xjdr/nmoe_train:latest",
+  "agent_visible_commit": "970a146433f9c649d09ddab36f675974f53dd905"
+}

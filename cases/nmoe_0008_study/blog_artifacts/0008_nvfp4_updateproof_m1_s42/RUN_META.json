@@ -1,0 +1,23 @@
+{
+  "label": "0008_nvfp4_updateproof_m1_s42",
+  "run_id": "run_1779435654_6996",
+  "cmd": [
+    "torchrun",
+    "--nproc_per_node=8",
+    "-m",
+    "nmoe.train",
+    "configs/moonlet.toml",
+    "--experiments_db=/tmp/experiments_0008_0008_nvfp4_updateproof_m1_s42.db",
+    "--dtype=nvfp4",
+    "--steps=200",
+    "--seed=42",
+    "--lr_dense=0.003",
+    "--lr_router=0.003",
+    "--lr_expert=0.003",
+    "--adam_beta2_expert=0.99",
+    "--log_every=10"
+  ],
+  "elapsed_s": 154.38353729248047,
+  "image": "xjdr/nmoe_train:latest",
+  "agent_visible_commit": "970a146433f9c649d09ddab36f675974f53dd905"
+}

@@ -1,0 +1,28 @@
+{
+  "campaign": "speedrun_super_research",
+  "stage": "benchmark",
+  "candidate_id": "0011_route_scale_v2",
+  "run_id": "run_1779439328_1240",
+  "overrides": {
+    "aux_loss_alpha": 0.0001,
+    "route_scale": 1.5
+  },
+  "dtype_override": null,
+  "decision": {
+    "kept": false,
+    "reason": "scratch_trial",
+    "wave": "operator_probe",
+    "is_global_champion": false,
+    "in_campaign": false
+  },
+  "metrics": {
+    "final_valid_loss": 5.238055229187012,
+    "final_train_loss": 5.206331253051758,
+    "core": -0.018138127571652733,
+    "tokens_per_s_per_gpu": 88960.14906160525
+  },
+  "budget": {
+    "steps": 512
+  },
+  "image": "xjdr/nmoe_train:latest"
+}

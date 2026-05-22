@@ -1,0 +1,23 @@
+{
+  "label": "0008_nvfp4_m1_s43_solo",
+  "run_id": "run_1779436143_10399",
+  "cmd": [
+    "torchrun",
+    "--nproc_per_node=8",
+    "-m",
+    "nmoe.train",
+    "configs/moonlet.toml",
+    "--experiments_db=/tmp/experiments_0008_0008_nvfp4_m1_s43_solo.db",
+    "--dtype=nvfp4",
+    "--steps=200",
+    "--seed=43",
+    "--lr_dense=0.003",
+    "--lr_router=0.003",
+    "--lr_expert=0.003",
+    "--adam_beta2_expert=0.99",
+    "--log_every=10"
+  ],
+  "elapsed_s": 142.48871541023254,
+  "image": "xjdr/nmoe_train:latest",
+  "agent_visible_commit": "970a146433f9c649d09ddab36f675974f53dd905"
+}

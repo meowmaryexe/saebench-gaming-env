@@ -1,0 +1,11 @@
+{
+  "label": "0011_bf16_baseline_v0",
+  "run_id": "run_1779439367_1241",
+  "overrides": {
+    "aux_loss_alpha": 0.0001
+  },
+  "dtype_override": "bf16",
+  "elapsed_s": 992.9120469093323,
+  "image": "xjdr/nmoe_train:latest",
+  "agent_visible_commit": "970a146433f9c649d09ddab36f675974f53dd905"
+}

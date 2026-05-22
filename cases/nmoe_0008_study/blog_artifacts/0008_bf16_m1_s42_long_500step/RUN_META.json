@@ -1,0 +1,23 @@
+{
+  "label": "0008_bf16_m1_s42_long_500step",
+  "run_id": "run_1779436044_1213",
+  "cmd": [
+    "torchrun",
+    "--nproc_per_node=8",
+    "-m",
+    "nmoe.train",
+    "configs/moonlet.toml",
+    "--experiments_db=/tmp/experiments_0008_0008_bf16_m1_s42_long_500step.db",
+    "--dtype=bf16",
+    "--steps=500",
+    "--seed=42",
+    "--lr_dense=0.003",
+    "--lr_router=0.003",
+    "--lr_expert=0.003",
+    "--adam_beta2_expert=0.99",
+    "--log_every=10"
+  ],
+  "elapsed_s": 200.0423550605774,
+  "image": "xjdr/nmoe_train:latest",
+  "agent_visible_commit": "970a146433f9c649d09ddab36f675974f53dd905"
+}

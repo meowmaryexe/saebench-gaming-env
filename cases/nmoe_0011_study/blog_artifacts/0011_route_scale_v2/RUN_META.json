@@ -1,0 +1,12 @@
+{
+  "label": "0011_route_scale_v2",
+  "run_id": "run_1779439328_1240",
+  "overrides": {
+    "aux_loss_alpha": 0.0001,
+    "route_scale": 1.5
+  },
+  "dtype_override": null,
+  "elapsed_s": 1085.2655119895935,
+  "image": "xjdr/nmoe_train:latest",
+  "agent_visible_commit": "970a146433f9c649d09ddab36f675974f53dd905"
+}

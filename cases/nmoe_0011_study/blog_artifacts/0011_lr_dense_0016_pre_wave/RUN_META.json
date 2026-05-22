@@ -1,0 +1,12 @@
+{
+  "label": "0011_lr_dense_0016_pre_wave",
+  "run_id": "run_1779439434_32",
+  "overrides": {
+    "aux_loss_alpha": 0.00015,
+    "lr_dense": 0.0016
+  },
+  "dtype_override": null,
+  "elapsed_s": 1101.8486785888672,
+  "image": "xjdr/nmoe_train:latest",
+  "agent_visible_commit": "970a146433f9c649d09ddab36f675974f53dd905"
+}

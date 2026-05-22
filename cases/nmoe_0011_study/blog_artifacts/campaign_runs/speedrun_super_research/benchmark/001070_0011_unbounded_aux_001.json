@@ -1,0 +1,27 @@
+{
+  "campaign": "speedrun_super_research",
+  "stage": "benchmark",
+  "candidate_id": "0011_unbounded_aux_001",
+  "run_id": "run_1779439142_1238",
+  "overrides": {
+    "aux_loss_alpha": 0.001
+  },
+  "dtype_override": null,
+  "decision": {
+    "kept": false,
+    "reason": "outside_kept_envelope",
+    "wave": "operator_probe",
+    "is_global_champion": false,
+    "in_campaign": false
+  },
+  "metrics": {
+    "final_valid_loss": 5.209310054779053,
+    "final_train_loss": 5.193702220916748,
+    "core": -0.01779584302509513,
+    "tokens_per_s_per_gpu": 94451.81702317283
+  },
+  "budget": {
+    "steps": 512
+  },
+  "image": "xjdr/nmoe_train:latest"
+}

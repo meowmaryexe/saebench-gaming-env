@@ -1,0 +1,27 @@
+{
+  "campaign": "speedrun_super_research",
+  "stage": "benchmark",
+  "candidate_id": "0011_bf16_baseline_v0",
+  "run_id": "run_1779439367_1241",
+  "overrides": {
+    "aux_loss_alpha": 0.0001
+  },
+  "dtype_override": "bf16",
+  "decision": {
+    "kept": false,
+    "reason": "wrong_lane_pre_campaign",
+    "wave": "operator_probe",
+    "is_global_champion": false,
+    "in_campaign": false
+  },
+  "metrics": {
+    "final_valid_loss": 5.213071346282959,
+    "final_train_loss": 5.180586814880371,
+    "core": -0.017324837451431915,
+    "tokens_per_s_per_gpu": 89002.2046876376
+  },
+  "budget": {
+    "steps": 512
+  },
+  "image": "xjdr/nmoe_train:latest"
+}
