@@ -1,0 +1,22 @@
+{
+  "arm": "idle_pin",
+  "label": "idle_pin_rep01",
+  "cpu_a": 2,
+  "window": 500,
+  "burn_in": 2500,
+  "dwell_ms": 300,
+  "n_allowed_cpus": 24,
+  "events": [
+    {
+      "event": "compile_done",
+      "fn": "probe_main",
+      "cpu": 2,
+      "t_ns": 54325556561
+    },
+    {
+      "event": "no_action",
+      "cpu": 2,
+      "t_ns": 55019801503
+    }
+  ]
+}

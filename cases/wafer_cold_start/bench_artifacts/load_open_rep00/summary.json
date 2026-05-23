@@ -1,0 +1,17 @@
+{
+  "arm": "load_open",
+  "label": "load_open_rep00",
+  "cpu_a": 2,
+  "window": 500,
+  "burn_in": 2500,
+  "dwell_ms": 300,
+  "n_allowed_cpus": 24,
+  "events": [
+    {
+      "event": "compile_done",
+      "fn": "probe_main",
+      "cpu": 2,
+      "t_ns": 55129232915
+    }
+  ]
+}

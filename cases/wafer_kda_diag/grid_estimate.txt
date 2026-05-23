@@ -1,0 +1,11 @@
+# Estimated grid for fused_recurrent_kda fwd
+# (default heuristic: BK = min(64, K), BV = min(64, V))
+BK = 64
+BV = 64
+NK = ceil(K / BK) = 2
+NV = ceil(V / BV) = 2
+N  = B = 1
+HV = 16
+grid_blocks = NK * NV * N * HV = 64
+sm_count    = 132
+blocks_per_sm = 0.485

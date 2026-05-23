@@ -1,0 +1,14 @@
+{
+  "B": 1,
+  "T": 1,
+  "H": 16,
+  "HV": 16,
+  "K": 128,
+  "V": 128,
+  "dtype": "torch.bfloat16",
+  "reps": 500,
+  "total_ms": 25.661376953125,
+  "per_call_us": 51.32275390625,
+  "sm_count": 132,
+  "device": "NVIDIA H100 80GB HBM3"
+}

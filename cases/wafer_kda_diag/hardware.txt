@@ -1,0 +1,45 @@
+
+$ nvidia-smi
+Sat May 23 00:17:57 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.95.05              Driver Version: 580.95.05      CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100 80GB HBM3          On  |   00000000:C1:00.0 Off |                    0 |
+| N/A   34C    P0             69W /  700W |       4MiB /  81559MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+
+$ nvidia-smi --query-gpu=name,multiprocessor_count,memory.total,driver_version,clocks.gr,clocks.mem --format=csv
+Field "multiprocessor_count" is not a valid field to query.
+
+
+$ uname -a
+Linux modal 4.4.0 #1 SMP Sun Jan 10 15:06:54 PST 2016 x86_64 x86_64 x86_64 GNU/Linux
+
+$ nproc
+8
+
+$ torch.cuda.get_device_properties
+name = NVIDIA H100 80GB HBM3
+multi_processor_count = 132
+shared_memory_per_block = 49152
+shared_memory_per_block_optin = 232448
+warp_size = 32
+regs_per_multiprocessor = 65536
+max_threads_per_multi_processor = 2048
+total_memory = 85017624576
+major = 9
+minor = 0
+L2_cache_size = 52428800

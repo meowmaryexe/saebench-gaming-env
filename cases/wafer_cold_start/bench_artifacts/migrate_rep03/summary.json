@@ -1,0 +1,24 @@
+{
+  "arm": "migrate",
+  "label": "migrate_rep03",
+  "cpu_a": 2,
+  "window": 500,
+  "burn_in": 2500,
+  "dwell_ms": 300,
+  "n_allowed_cpus": 24,
+  "events": [
+    {
+      "event": "compile_done",
+      "fn": "probe_main",
+      "cpu": 2,
+      "t_ns": 48733220926
+    },
+    {
+      "event": "migrate",
+      "from_cpu": 2,
+      "to_cpu": 23,
+      "observed_cpu": 23,
+      "t_ns": 49229631931
+    }
+  ]
+}
