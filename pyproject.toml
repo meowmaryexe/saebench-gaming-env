@@ -5,7 +5,12 @@ description = "HUD environment for diagnosing ML/CI failures from scraped artefa
 requires-python = ">=3.11"
 dependencies = [
     "hud-python",
+    "numpy<2.0",
     "openai>=1.40",
+    "sae-bench>=0.5.0",
+    "sae-lens>=6.44.3",
+    "scipy>=1.17.1",
+    "torch>=2.12.1",
 ]
 
 [build-system]
