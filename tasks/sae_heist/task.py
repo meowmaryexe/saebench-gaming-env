@@ -125,6 +125,8 @@ async def sae_heist(prompt: str, case: str):
     scr    = score_scr(W_enc, W_dec, meta_scored, acts_sub)
     gt_mcc = score_gt_mcc(W_dec, gt)
 
+    print(f"[grader] SCR={scr:.4f}  GT-MCC={gt_mcc:.4f}", flush=True)
+
     yield EvaluationResult(
         reward=float(scr),
         content=f"SCR={scr:.4f}  GT-MCC={gt_mcc:.4f}",
