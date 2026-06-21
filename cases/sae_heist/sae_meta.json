@@ -1,0 +1,19 @@
+{
+  "d_model": 768,
+  "n_latents": 4096,
+  "threshold": 0.0,
+  "samples_per_class": 422,
+  "scr_task": "scr_Ti_or_Si_single_0",
+  "t_feats": [
+    28,
+    1090
+  ],
+  "s_feats": [
+    18
+  ],
+  "t_op": "or",
+  "s_op": "single",
+  "n_samples": 60000,
+  "seed": 42,
+  "source": "decoderesearch/synth-sae-bench-16k-v1"
+}

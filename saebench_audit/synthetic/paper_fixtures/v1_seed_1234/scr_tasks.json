@@ -1,0 +1,197 @@
+[
+  {
+    "name": "scr_Ti_single_Si_single_0",
+    "t_op": "single",
+    "t_feats": [
+      4
+    ],
+    "t_cat": "in",
+    "s_op": "single",
+    "s_feats": [
+      56
+    ],
+    "s_cat": "in",
+    "root_t": 4,
+    "root_s": 56,
+    "cell_counts": {
+      "00": 46958,
+      "01": 2448,
+      "10": 10026,
+      "11": 568
+    }
+  },
+  {
+    "name": "scr_Ti_single_Si_single_1",
+    "t_op": "single",
+    "t_feats": [
+      64
+    ],
+    "t_cat": "in",
+    "s_op": "single",
+    "s_feats": [
+      103
+    ],
+    "s_cat": "in",
+    "root_t": 64,
+    "root_s": 103,
+    "cell_counts": {
+      "00": 55111,
+      "01": 2089,
+      "10": 2654,
+      "11": 146
+    }
+  },
+  {
+    "name": "scr_Ti_single_Si_single_2",
+    "t_op": "single",
+    "t_feats": [
+      63
+    ],
+    "t_cat": "in",
+    "s_op": "single",
+    "s_feats": [
+      106
+    ],
+    "s_cat": "in",
+    "root_t": 63,
+    "root_s": 106,
+    "cell_counts": {
+      "00": 55064,
+      "01": 2022,
+      "10": 2802,
+      "11": 112
+    }
+  },
+  {
+    "name": "scr_Ti_single_Si_or_0",
+    "t_op": "single",
+    "t_feats": [
+      10
+    ],
+    "t_cat": "in",
+    "s_op": "or",
+    "s_feats": [
+      587,
+      586
+    ],
+    "s_cat": "in",
+    "root_t": 10,
+    "root_s": 114,
+    "cell_counts": {
+      "00": 51994,
+      "01": 863,
+      "10": 6982,
+      "11": 161
+    }
+  },
+  {
+    "name": "scr_Ti_single_Si_or_1",
+    "t_op": "single",
+    "t_feats": [
+      24
+    ],
+    "t_cat": "in",
+    "s_op": "or",
+    "s_feats": [
+      61,
+      375
+    ],
+    "s_cat": "in",
+    "root_t": 24,
+    "root_s": 61,
+    "cell_counts": {
+      "00": 52644,
+      "01": 2719,
+      "10": 4396,
+      "11": 241
+    }
+  },
+  {
+    "name": "scr_Ti_single_Si_or_2",
+    "t_op": "single",
+    "t_feats": [
+      20
+    ],
+    "t_cat": "in",
+    "s_op": "or",
+    "s_feats": [
+      363,
+      58
+    ],
+    "s_cat": "in",
+    "root_t": 20,
+    "root_s": 58,
+    "cell_counts": {
+      "00": 52108,
+      "01": 2735,
+      "10": 4916,
+      "11": 241
+    }
+  },
+  {
+    "name": "scr_Ti_or_Si_single_0",
+    "t_op": "or",
+    "t_feats": [
+      41,
+      295
+    ],
+    "t_cat": "in",
+    "s_op": "single",
+    "s_feats": [
+      56
+    ],
+    "s_cat": "in",
+    "root_t": 41,
+    "root_s": 56,
+    "cell_counts": {
+      "00": 53566,
+      "01": 2844,
+      "10": 3418,
+      "11": 172
+    }
+  },
+  {
+    "name": "scr_Ti_or_Si_single_1",
+    "t_op": "or",
+    "t_feats": [
+      531,
+      100
+    ],
+    "t_cat": "in",
+    "s_op": "single",
+    "s_feats": [
+      46
+    ],
+    "s_cat": "in",
+    "root_t": 100,
+    "root_s": 46,
+    "cell_counts": {
+      "00": 54598,
+      "01": 3212,
+      "10": 2084,
+      "11": 106
+    }
+  },
+  {
+    "name": "scr_Ti_or_Si_single_2",
+    "t_op": "or",
+    "t_feats": [
+      85,
+      469
+    ],
+    "t_cat": "in",
+    "s_op": "single",
+    "s_feats": [
+      18
+    ],
+    "s_cat": "in",
+    "root_t": 85,
+    "root_s": 18,
+    "cell_counts": {
+      "00": 52418,
+      "01": 5185,
+      "10": 2166,
+      "11": 231
+    }
+  }
+]
