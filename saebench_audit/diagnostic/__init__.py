@@ -11,19 +11,6 @@ The paper introduces four degraded controls and one perfect oracle (\\S 4.2):
   directions; encoder returns exact GT feature activations (lookup-based).
 """
 
-from saebench_audit.diagnostic.degraded import (
-    best_k_variant,
-    permute_decoder,
-    random_init_variant,
-    random_l0_matched,
-)
 from saebench_audit.diagnostic.perfect_oracle import PerfectSAE, perfect_oracle
 
-__all__ = [
-    "PerfectSAE",
-    "best_k_variant",
-    "perfect_oracle",
-    "permute_decoder",
-    "random_init_variant",
-    "random_l0_matched",
-]
+__all__ = ["PerfectSAE", "perfect_oracle"]
