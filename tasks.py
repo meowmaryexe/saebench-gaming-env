@@ -11,6 +11,7 @@ from tasks.prime_rl_chunk_default_tradeoff.task import task as _prime_rl_chunk_d
 from tasks.wafer_cold_start.task import task as _wafer_cold_start
 from tasks.wafer_kimi_delta_attention.task import task as _wafer_kimi_delta_attention
 from tasks.wafer_nvfp4_silu_audit.task import task as _wafer_nvfp4_silu_audit
+from tasks.sae_heist.task import task as _sae_heist
 
 TASKS = [
     _prime_rl_chunk_default_tradeoff,
@@ -24,4 +25,5 @@ TASKS = [
     _wafer_cold_start,
     _wafer_kimi_delta_attention,
     _wafer_nvfp4_silu_audit,
+    _sae_heist,
 ]

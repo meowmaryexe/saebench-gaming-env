@@ -25,7 +25,12 @@ PROMPT = (
     "would flip your call, and the strongest objection the infra "
     "team will raise. don't restate the PR body — i've read it, "
     "and anything you could write without opening the repo is a "
-    "waste of my monday."
+    "waste of my monday.\n\n"
+    "Write a first draft of REPORT.md after opening "
+    "your first few files — don't wait until all research is done. "
+    "You can overwrite it as you find more evidence. "
+    "don't use shell cells as a scratch-pad or for status prints — "
+    "when you're ready to write, write directly to REPORT.md."
 )
 
 RUBRIC = {

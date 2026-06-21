@@ -1,6 +1,7 @@
 FROM public.ecr.aws/docker/library/python:3.11-bookworm
 
 ENV DEBIAN_FRONTEND=noninteractive
+ENV HUD_ALLOW_UNISOLATED_WORKSPACE=1
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
         ripgrep \
@@ -31,6 +32,28 @@ RUN pip install --no-cache-dir \
         "duckdb>=1" \
         "numpy>=1.26"
 
+# Grader dependencies for sae_heist.
+# These live under /app (chmod 0700 below) — the agent cannot see them.
+COPY scoring.py ./
+COPY saebench_audit/ ./saebench_audit/
+COPY tasks/sae_heist/ ./tasks/sae_heist/
+COPY env_with_tasks.py ./
+# tasks/ has no __init__.py in Docker (other task modules not needed here),
+# so create one so 'import tasks.sae_heist.task' resolves tasks as a package.
+RUN touch tasks/__init__.py
+
+# ML scoring stack for the grader: sae-lens (pulls torch), sae-bench, scipy.
+RUN pip install --no-cache-dir \
+        "sae-lens==6.44.3" \
+        "sae-bench==0.6.0" \
+        "scipy>=1.11"
+
+# Upgrade beartype to fix hud-python's key_value.aio circular import.
+# transformer-lens metadata claims beartype<0.15 but only uses @beartype decorator
+# which is runtime-compatible with all versions. --no-deps bypasses pip's backward
+# constraint check so this succeeds despite the metadata conflict.
+RUN pip install --no-cache-dir --no-deps "beartype>=0.20.0"
+
 # Cases are baked at /opt/ci_cases, invisible to the agent. At scenario-
 # start the env hard-copies the selected case's children into /workspace
 # and chowns them to the env process uid, so `ls` just shows the case
@@ -55,4 +78,4 @@ RUN chmod 0700 /app \
 # The agent still lands in /workspace through env.workspace("/workspace").
 WORKDIR /app
 
-CMD ["hud", "serve", "env:env", "--host", "0.0.0.0"]
+CMD ["hud", "serve", "env_with_tasks:env", "--host", "0.0.0.0"]
