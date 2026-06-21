@@ -12,6 +12,32 @@ score_scr     — Scorer A (visible reward): Spurious Correlation Removal benchm
                 pipeline (NO reimplementation).
 
 Source: https://github.com/decoderesearch/saebench-reliability-audit
+
+=== SCR ABLATION MECHANISM (source-verified, sae_bench 0.5, main.py line refs) ===
+
+Step 1 — Probe training (eval_scr.py:116,202): Probes are LINEAR CLASSIFIERS trained on
+768-dim hidden activations (not 4096-dim latents). _meaned() squeezes class_acts from
+[B,1,768] to [B,768] before train_probe_on_activations().
+
+Step 2 — Feature selection (main.py:86,122-130): sae.encode() maps hidden→4096-dim latents.
+Per-latent "effect" = mean_activation_diff_F × (probe_weight_768 @ W_dec.T_768×4096)_F.
+Top-N latents by absolute effect are selected for ablation.
+
+Step 3 — Ablation with error correction (main.py:219-223): Selected latents are zeroed
+in the encoded space (f_BLF[..., to_ablate] = 0.0), then decoded; the pre-ablation
+reconstruction error (error_BLD = input - decode(f_original)) is ADDED BACK, so the
+output stays close to the original even when the SAE reconstructs poorly.
+
+Step 4 — SCR formula (eval_scr.py:140-143): scr = (changed_acc - original_acc) /
+(T_clean - original_acc). original_acc = biased probe (trained on T∧S) on T data, pre-
+ablation; changed_acc = same probe on T data post-ablation; T_clean = T probe on T data
+(fixed baseline, computed once on unablated activations).
+
+CONSEQUENCE: For a zero/random SAE, error_BLD ≈ input, so modified_acts ≈ original →
+changed_acc = original_acc → SCR = 0.  For the oracle, error_BLD ≈ 0 and ablation
+cleanly removes S from the representation → changed_acc rises → SCR high.  The paper's
+gamability thesis requires a TRAINED POLYSEMANTIC SAE whose polysemantic latents inflate
+SCR beyond what GT-MCC would predict; a random-init SAE does not demonstrate this.
 """
 
 from __future__ import annotations

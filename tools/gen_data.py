@@ -38,7 +38,7 @@ from sae_lens import StandardSAE, StandardSAEConfig
 from sae_lens.synthetic import SyntheticModel
 
 DEVICE = "cpu"
-N_SAMPLES = 60_000     # paper standard (NUM_SAMPLES in data_gen.py)
+N_SAMPLES = 215_000    # 60K→215K: T∧S class (0.7% of data) needs ≥1500 for stable probes
 SEED = 42
 SAMPLES_PER_CLASS_TARGET = 100    # audit-repo min_per_cell_default; error path needs <20
 

@@ -1,0 +1,18 @@
+{
+  "trained_gt_mcc": 0.1487686861772378,
+  "trained_scr": -0.0782828173843174,
+  "trained_scr_all_n": {
+    "scr_avg_threshold_2": -0.0782828173843174,
+    "scr_avg_threshold_5": -0.1111111319604776,
+    "scr_avg_threshold_10": -0.26346803731844676,
+    "scr_avg_threshold_50": -0.9646465688932973
+  },
+  "oracle_gt_mcc": 1.0,
+  "oracle_scr": 0.599,
+  "training_samples": 500000,
+  "batch_size": 1024,
+  "lr": 0.0003,
+  "l1_coefficient": 0.0004,
+  "d_model": 768,
+  "n_latents": 4096
+}
