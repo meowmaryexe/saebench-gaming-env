@@ -15,5 +15,7 @@
   "s_op": "single",
   "n_samples": 60000,
   "seed": 42,
-  "source": "decoderesearch/synth-sae-bench-16k-v1"
+  "source": "decoderesearch/synth-sae-bench-16k-v1",
+  "n_samples_deploy_subset": 5000,
+  "deploy_subset_note": "Truncated for HUD deploy before hackathon deadline"
 }
