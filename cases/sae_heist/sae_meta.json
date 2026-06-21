@@ -2,7 +2,7 @@
   "d_model": 768,
   "n_latents": 4096,
   "threshold": 0.0,
-  "samples_per_class": 422,
+  "samples_per_class": 50,
   "scr_task": "scr_Ti_or_Si_single_0",
   "t_feats": [
     28,
@@ -13,9 +13,9 @@
   ],
   "t_op": "or",
   "s_op": "single",
-  "n_samples": 60000,
+  "n_samples": 5000,
   "seed": 42,
   "source": "decoderesearch/synth-sae-bench-16k-v1",
   "n_samples_deploy_subset": 5000,
-  "deploy_subset_note": "Truncated for HUD deploy before hackathon deadline"
+  "deploy_subset_note": "Truncated synth_acts, t_label, and s_label consistently for HUD deploy"
 }
