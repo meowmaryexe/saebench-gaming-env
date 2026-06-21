@@ -2,8 +2,6 @@
 
 SAE Heist is a reinforcement learning environment for improving Sparse Autoencoder (SAE) representations. The goal is to modify SAE encoder and decoder weights to maximize Spurious Correlation Removal (SCR), encouraging disentanglement between target features and spurious features while preserving useful information.
 
-Built for the HUD RL Hackathon.
-
 ## Overview
 
 The environment provides:
